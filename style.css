@@ -1,0 +1,226 @@
+/* Global Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header and Navigation Styling */
+header {
+    background: #007bff; /* Primary Blue Color */
+    color: white;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.main-nav ul li a:hover {
+    background-color: #0056b3;
+    border-radius: 5px;
+}
+
+.nav-toggle {
+    display: none; /* Hide the hamburger icon by default on desktop */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section Styling */
+.hero {
+    background: url('https://indiansafaris.com/wp-content/uploads/2020/12/india_spiritual_tours.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    height: 60vh; /* 60% of viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 4.2px;
+    margin-bottom: 1.5rem;
+    color:rgb(29, 94, 54);
+    background-image:url(https://indiansafaris.com/wp-content/uploads/2020/12/india_spiritual_tours.jpg);
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ffc107; /* Accent Yellow */
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e0a800;
+}
+
+/* General Section Styling */
+main section {
+    padding: 40px 5%;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+main section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #007bff;
+}
+
+/* Destinations Grid Styling */
+.destination-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    display:flex;
+     flex-direction: column;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 15px 0 5px;
+    color: #0056b3;
+}
+
+.card p {
+    padding: 0 15px 15px;
+    font-size: 0.9rem;
+}
+
+/* Footer Styling */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #ffc107;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+/* ---------------------------------- */
+/* RESPONSIVE DESIGN (For Mobile) */
+/* ---------------------------------- */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 5%;
+    }
+
+    .main-nav {
+        /* Hide menu initially on small screens */
+        display: none; 
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        background: #007bff;
+        z-index: 10;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .main-nav.active {
+        display: block; /* Show menu when active */
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .main-nav ul li a {
+        padding: 10px 20px;
+        border-bottom: 1px solid #0056b3;
+    }
+    
+    .nav-toggle {
+        display: block; /* Show the hamburger icon */
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .destination-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; /* Make cards take up most of the screen width */
+    }
+}

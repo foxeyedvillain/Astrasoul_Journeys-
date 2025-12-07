@@ -1,0 +1,97 @@
+/* --- Contact Us Section Styling --- */
+
+.contact-us-section {
+    max-width: 800px; /* Center the section and limit its width */
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-us-section h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.contact-us-section p {
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* Form Layout */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Input and Textarea Styling */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form select,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+/* Submit Button Styling */
+.submit-button {
+    background-color: #ffc107; /* Accent Yellow */
+    color: #333;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-top: 10px;
+}
+
+.submit-button:hover {
+    background-color: #e0a800;
+}
+
+/* Direct Contact Info */
+.contact-info h3 {
+    margin-top: 20px;
+    color: #0056b3;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}

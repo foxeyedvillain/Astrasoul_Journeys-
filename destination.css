@@ -1,0 +1,135 @@
+.destination-list-section {
+    padding: 40px 5%;
+    background-color: #f9f9f9; /* Light background for the whole section */
+}
+
+.destination-list-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #007bff;
+}
+
+.destination-list-container {
+    max-width: 900px; /* Constrain the list width */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Spacing between cards */
+}
+
+/* Style for individual Destination Card */
+.destination-item {
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #eee;
+}
+.destination-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.item-image-wrapper {
+    flex-basis: 35%; /* Image takes 35% of the card width */
+    max-width: 35%;
+}
+
+.item-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the space without distortion */
+    display: block;
+}
+
+.item-content {
+    flex-basis: 65%; /* Content takes 65% of the card width */
+    padding: 20px;
+}
+
+.item-content h3 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.item-content p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.item-link {
+    display: inline-block;
+    background-color: #ffc107; /* Accent Yellow */
+    color: #333;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.item-link:hover {
+    background-color: #e0a800;
+}
+
+/* Load More Button Styling */
+.load-more-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.load-more-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.load-more-button:hover {
+    background-color: #0056b3;
+}
+.backhome {
+    text-align: center;
+    margin-top: 30px;
+}
+.bth {
+    background-color:#007bff;
+    color: #eee;
+    text-decoration: none;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+.bth:hover {
+     background-color: #0056b3;
+}
+
+/* --- Responsive Design for Small Screens --- */
+@media (max-width: 650px) {
+    .destination-item {
+        /* Stack the image and content vertically on small screens */
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .item-image-wrapper, .item-content {
+        flex-basis: auto;
+        max-width: 100%;
+    }
+
+    .item-image-wrapper img {
+        height: 250px; /* Give the image a fixed height when stacked */
+    }
+}
